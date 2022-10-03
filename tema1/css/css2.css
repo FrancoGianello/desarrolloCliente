@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.25rem;
+}
+.pater{
+    margin: 0 auto; 
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+.contenedor{
+    width: 90%;
+    max-width: 500px;
+    background-color: rgb(236, 225, 225);
+    min-height: 400px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    border: 1px solid black;
+}
+form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+input{
+    width: 100%;
+    height: 10%;
+}
+.submit{
+    border: none;
+    background-color: aquamarine;
+    transition: all 200ms ease-in;
+}
+.submit:hover{
+    background-color: red;
+    box-shadow: 2px 2px 2px rgba(138, 0, 0, 0.527);
+}
