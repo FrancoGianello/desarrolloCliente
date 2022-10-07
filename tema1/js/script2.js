@@ -4,7 +4,7 @@ function mostrar(){
     let apellido = document.getElementsByClassName("nombre")[1].value;
     document.getElementById("boom").innerHTML = "Datos" + nombre + " " + apellido;
     let numero = document.getElementsByClassName("numero")[0].value;
-    document.getElementById("circunferencia").innerHTML = "Longitud: " + (numero * 3.14 * 2);
+    document.getElementById("circunferencia").innerHTML = "Longitud: " + (numero * Math.PI * 2);
     
 }
 let numeros = [];
