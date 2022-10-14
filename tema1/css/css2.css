@@ -43,6 +43,6 @@ input{
     transition: all 200ms ease-in;
 }
 .submit:hover{
-    background-color: red;
+    background-color: magenta;
     box-shadow: 2px 2px 2px rgba(138, 0, 0, 0.527);
 }
