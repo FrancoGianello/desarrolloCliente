@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/scriptEjercicio3.js"></script>
+    <style>
+        .pater{
+            display: flex;
+            flex-flow: column;
+            gap: 10px;
+        }
+        table{
+            margin-top: 10px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        td{
+            width: 100px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="pater">
+        <div id="ejer1">
+            <input class="lado" type="number">
+            <input class="lado" type="number">
+            <input type="button" onclick="perimetro()" value="enviar"/>
+        </div>
+        <div id="ejer2">
+            <input type="button" onclick="quedanDias()" value="Calcular días restantes"/>
+        </div>
+    </div>
+</body>
+</html>

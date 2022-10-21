@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+.pater{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+    width: 400px;
+    margin: 0 auto;
+}
+table, td, tr{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.pater>div{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+#divPrimero, #divSegundo{
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.hacer, .generar{
+    width: 100%;
+}
