@@ -24,5 +24,5 @@ function quedanDias(){
    let fechaFinal = new Date(2023,0,1);
    let contenedor = document.getElementById('ejer2');
    let quedan = fechaFinal-fecha;
-   contenedor.innerHTML = "Quedan: "+parseInt(quedan/86400000)+ " días para el fin";
+   contenedor.innerHTML = "<p>Quedan: "+parseInt(quedan/86400000)+ " días para el fin</p>";
 }
