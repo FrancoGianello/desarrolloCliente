@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+}
+.pater{
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    width: 500px;
+    margin: 0 auto;
+}
+.pater>div{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.boton{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+#ejer3>input{
+    width: 100%;
+}
+ul{
+    list-style-type: lower-alpha;
+}
+li{
+    font-size: 1.1rem;
+}
+.datosIntroducidos{
+    margin-left: 2rem;
+    list-style-type:decimal;
+}
