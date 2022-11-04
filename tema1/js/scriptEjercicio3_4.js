@@ -4,7 +4,7 @@ function primeraVentana(){
     // primera.scrollTo(0, 1000);
 }
 function segundaVentana(){
-    let numero = Math.ceil(Math.random()*3);
+    let numero = Math.round(Math.random()*3);
     let segundo = document.getElementById("textoSegundo");
     let enlace="";
     switch (numero) {
@@ -18,4 +18,12 @@ function segundaVentana(){
     
     segundo.innerHTML = "Ha salido el: "+numero+" lo que redirige a "+enlace;
     let segundaVentana = window.open(enlace, "ventana2", "width=500,height=500");
+}
+function terceraVentana(){
+    let ancho = screen.width;
+    let alto = screen.height/2;
+    let tercera = window.open("https://www.w3schools.com","ventana3", `width=${ancho},height=${alto}`);
+    var cookieEnabled = navigator.cookieEnabled;
+
+    if (!cookieEnabled)alert("Cookies desactivadas");else alert("Cookies activadas");
 }
