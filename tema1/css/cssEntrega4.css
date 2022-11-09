@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100vw;
+    height: 99vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.1fr;
+}
+.entradas, .datos{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.contenedor{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    gap: 10px;
+}
+.datos>.contenedor{
+    justify-content: start;
+}
+.boton{
+    padding: 1rem;
+}
+#maximoMinimo{
+    border: 1px solid black;
+    grid-column: 1 / 3;
+}
+#resultado{
+    text-align: center;
+    font-size: 40px;
+}

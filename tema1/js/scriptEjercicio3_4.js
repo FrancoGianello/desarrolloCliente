@@ -22,8 +22,7 @@ function segundaVentana(){
 function terceraVentana(){
     let ancho = screen.width;
     let alto = screen.height/2;
-    let tercera = window.open("https://www.w3schools.com","ventana3", `width=${ancho},height=${alto}`);
     var cookieEnabled = navigator.cookieEnabled;
-
     if (!cookieEnabled)alert("Cookies desactivadas");else alert("Cookies activadas");
+    let tercera = window.open("https://www.w3schools.com","ventana3", `width=${ancho},height=${alto}`);
 }
