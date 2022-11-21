@@ -9,7 +9,7 @@ function perimetro(){
    casilla = document.createElement("td");
    fila.appendChild(casilla).innerHTML= lado1.toFixed(2) +" "+ lado2.toFixed(2);
    casilla = document.createElement("td");
-   fila.appendChild(casilla).innerHTML= lado1 + lado2;
+   fila.appendChild(casilla).innerHTML= (lado1 + lado2)*2;
    tabla.style.display = "block";
 }
 
@@ -45,15 +45,27 @@ function alumnos(){
         boton.value="generar media";
         boton.onclick = function (){
             let cont = 0;
+            let nombres = "";
             for (let i = 0; i < cantidad; i++) {
+                nombres += "<p>"+document.getElementsByClassName("nombre")[i].value+" "+document.getElementsByClassName("nota")[i].value+" </p>";
                 cont += parseInt(document.getElementsByClassName("nota")[i].value);
             }
-            contenedor.innerHTML = "La media de los alumnos es: "+cont/cantidad;
+            contenedor.innerHTML = nombres + "La media de los alumnos es: "+ (cont/cantidad).toFixed(1);
             contenedor.style.display = "flex";
         }
     }
 }
 
 function comparacion(){
-    
+    let arrayStrings = [];
+    arrayStrings.push(document.getElementsByClassName("elementos")[0].value, document.getElementsByClassName("elementos")[1].value);
+    console.log(arrayStrings);
+    let texto1 = arrayStrings[0].toLowerCase();
+    let letras2 = arrayStrings[1].toLowerCase().split("");
+    let controlador = true;
+    letras2.forEach(element => {
+        if(!texto1.includes(element))controlador=false;
+    });
+    let resultado = document.getElementById("resultado");
+    (controlador)?resultado.innerHTML="Hay coincidencia en todas las letas": resultado.innerHTML="No hay coindencia"
 }

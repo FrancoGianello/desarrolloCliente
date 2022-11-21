@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 0.1fr;
+    gap: 5px;
+}
+.main>div{
+    border: 1px solid black;
+}
+#ejer1, .colorinchi, #texto{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.colorinchi{
+    width: 250px;
+    height: 100px;
+    background-color: green;
+}
+.colorinchi:active{
+    background-color: orange;
+}
+.colorinchi:active>p{
+    display: none;
+}
+img{
+    height: 60%;
+    width: 60%;
+    object-fit: cover;
+    object-position: center;
+}
+#ejer2{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+#ejer2>div{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
