@@ -1,0 +1,81 @@
+RESPUESTAS EJERCICIOS
+
+select * from actor
+where first_name='Scarlett'
+;
+
+
+select * from actor
+where last_name='Johansson'
+;
+
+
+
+select count(DISTINCT last_name)
+from actor
+;
+
+121
+
+
+
+select last_name , count(*) as 'numero_veces'
+from actor
+GROUP BY last_name
+having numero_veces=1
+;
+
+66
+
+
+
+
+select last_name , count(*) as 'numero_veces'
+from actor
+GROUP BY last_name
+having numero_veces>1
+;
+
+55
+
+
+select a.first_name, fa.actor_
+id, count(*) as 'contador'
+from film_actor fa INNER JOIN actor a
+ON fa.actor_id=a.actor_id
+GROUP BY fa.actor_id
+ORDER BY contador desc
+;
+
+
+GINA
+
+
+
+
+select title, inventory_id
+from film f INNER JOIN inventory i
+ON f.film_id=i.film_id
+where title="ACADEMY DINOSAUR"
+;
+
+SI ESTA DISPONIBLE
+
+
+
+
+INSERT INTO rental VALUES(16050,'2022-12-06 13:50:12',1,1,'2005-08-30 01:01:12',1,'2006-02-15 21:30:53');
+
+
+
+SELECT AVG(return_date-rental_date)
+FROM rental;
+
+19581368.0159
+
+OR 
+
+SELECT AVG(rental_duration)
+FROM film;
+
+4.9850

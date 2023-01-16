@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formulario{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div class="padre">
+            <form class="formulario" action="">
+                Disco: <input type="text" name="" id="disco" maxlength="25" required>
+                <div>
+                    Prestado: 
+                    Si: <input type="checkbox" name="Prestado" id="prestadoSi">
+                    No: <input type="checkbox" name="Prestado" id="prestadoNo">
+                </div>
+                Usuario: <input type="text" name="" id="Usuario" maxlength="25">
+                Telefono: <input type="text" name="" id="Numero" placeholder="numeritoo">
+                Escriba comentario: <textarea name="" id="comentario" maxlength="300" cols="30" rows="10" placeholder="comentario"></textarea>
+                <input type="button" value="enviar" onclick="comprobar()">
+            </input>
+            </form>
+        </div>
+    </main>
+    
+    <script>
+        let telefono = /^[0-9]{3}[-]?[0-9]{2}[-]?[0-9]{2}[-]?[0-9]{2}$/;
+        let numero = document.getElementById("Numero");;
+        function comprobar(){
+            let errorTlf="Telefono correcto";
+            let errorDisco="Disco correcto";
+            if(telefono.test(numero.value)==false) 
+                errorTlf="Secuencia del telefono incorrecta";
+            if (numero.value === '') 
+                errorTlf = "Telefono vacio";
+            if (document.getElementById("disco").value=="")
+                errorDisco="Falta Disco";
+            if(errorTlf!="Telefono correcto" || errorDisco!="Disco correcto") {
+                alert(errorDisco +" / "+errorTlf);
+            }else{
+                alert(errorDisco +" / "+errorTlf);
+            }
+        }
+    </script>
+</body>
+</html>

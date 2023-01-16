@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/entregaEjercicios5_4.js"></script>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        main, form{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        #cajaColor{
+            width: 50px;
+            height: 50px;
+            background-color: grey;
+        }
+        #boton{
+            width: 200px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form action="">
+            <p> Nombre: <input type="text" name="nombre" id="nombre"></p>
+            <p> Apellidos: <input type="text" name="apellidos" id="apellidos"></p>
+
+            <p>Pelicula:</p>
+            <div>
+                Top gun <input type="checkbox" name="peliculas" id="gun" value="Top gun">
+                Guerra mundial Z <input type="checkbox" name="peliculas" id="guerra" value="Guerra mundial Z">
+                Crepusculo <input type="checkbox" name="peliculas" id="Crepusculo" value="Crepusculo">
+                Tenet <input type="checkbox" name="peliculas" id="cine" value="Tenet">                
+                Forest Gump <input type="checkbox" name="peliculas" id="gump" value="Forest Gump"> 
+            </div>
+            <div class="colores">
+                <p>Escoge un color:<br>
+                Rojo: <input type="radio" name="color" id="rojo" value="rojo"><br>
+                Verde: <input type="radio" name="color" id="verde" value="verde"><br>
+                Azul: <input type="radio" name="color" id="azul" value="azul">
+                </p>
+                <div id="cajaColor"></div>
+            </div>
+            <input type="button" id="boton" value="generar" onclick="generar()">
+
+        </form>
+        <div class="resul"></div>
+    </main>
+</body>
+</html>

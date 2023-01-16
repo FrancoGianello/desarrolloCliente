@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{   
+            margin: 0 auto;
+            height: 40vh;
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-flow: column;
+        }
+        .botones{
+            width: 100%;
+            display: flex;
+            height: 30%;
+        }
+        .botones>input{
+            width: 50%;
+            height: 100%;
+            border: none;
+            transition: all 0.2s ease-in;
+        }
+        .botones>input:hover{
+            background-color: rgb(163, 231, 231);
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <h1 id="titulo">TITULO DINAMICO</h1>
+            <div class="botones">
+                <input id="color" type="button" value="Cambiar color">                
+                <input id="ambos" type="button" value="Cambiar ambos">
+                <input id="tamanio" type="button" value="Cambiar tamaño fuente">
+            </div>
+        </div>
+    </main>
+    <script>
+        let titulo = document.getElementById("titulo");
+        let color = document.getElementById("color");
+        let tamanio = document.getElementById("tamanio");        
+        let ambos = document.getElementById("ambos");
+        color.addEventListener("click", function(){
+            titulo.style.color=obtenerColor();
+        })
+        tamanio.addEventListener("click", function(){
+            titulo.style.fontSize=obtenerTamanio();
+        })
+        ambos.addEventListener("click",function(){
+            titulo.style.color=obtenerColor();
+            titulo.style.fontSize=obtenerTamanio();
+        })
+        function obtenerTamanio(){
+            return Math.floor((Math.random()*40)+10)+"px";
+        }
+        function obtenerColor(){
+            return "rgb(" + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255)  + "," + Math.floor(Math.random()*255) + ")"
+        }
+    </script>
+</body>
+</html>

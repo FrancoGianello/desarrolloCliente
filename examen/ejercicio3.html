@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            width: 100vw;
+            height: 100vh;
+        }
+        #boton{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 20px;
+            left: 20px;
+        }
+        .pentagon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 0;
+            width: 180px;
+            border-top: 180px solid rgb(0, 66, 128);
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+        }
+        
+        .pentagon:after{
+            position: absolute;
+            content: '';
+            border-bottom: 180px solid rgb(0, 66, 128);
+            border-left: 180px solid transparent;
+            border-right: 180px solid transparent;
+            bottom: 180px;
+            left: -90px;
+        }
+    </style>
+</head>
+<body>
+    <main class="main" id="main">
+    </main>
+    <input type="button" value="Pinchar" id="boton">
+    <div class="pentagon"></div>
+    <script>
+        let padre = document.getElementById("main");
+        let boton = document.getElementById("boton");
+        boton.addEventListener("click", (e) => {
+            padre.style.background = "rgb(" + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255)  + "," + Math.floor(Math.random()*255) + ")";
+        });
+        padre.addEventListener("click", (e) => {
+            padre.style.background = "white";
+        });
+    </script>
+</body>
+</html>

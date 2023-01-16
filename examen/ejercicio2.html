@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0;
+        }
+        main{
+            width: 100vw;
+            height: 100vh;
+            background-color: green;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-flow: column;
+            gap: 40px;
+        }
+        .datos{
+            width: 100%;
+            height: 25%;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        h1,h3{
+            color: white;
+        }
+        .boton{
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div class="datos" id="datos">
+            <div>Nombre <input type="text" name="" id="nombre"></div>
+            <div>Edad <input type="text" name="" id="edad"></div>
+            <div>Ciudad <input type="text" name="" id="ciudad"></div>
+            <div>Puntuacion <input type="text" name="" id="puntuacion"></div>
+        </div>
+        <input type="button" class="boton" onclick="mostrarDatos()" value="generar datos">
+        <h3 id="jugadorDatos"></h3>
+        <h1 id="resultado"></h1>
+    </main>
+    <script>
+        class Jugador{
+            constructor(nombre, edad, ciudad){
+                this.nombre=nombre;
+                this.edad=edad;
+                this.ciudad=ciudad;
+            }
+            imprimirDatos(){
+                return "Jugador de nombre: "+this.nombre+". Edad: "+this.edad+". Ciudad: "+this.ciudad+".";
+            }
+        }
+        class Campeonato extends Jugador{
+            constructor(nombre, edad, ciudad, puntuacion){
+                super(nombre, edad, ciudad);
+                this.puntuacion=puntuacion;
+            }
+            comprobarConvocatoria(){
+                let convocado = "No está convocado";
+                if(parseInt(this.puntuacion)>50) convocado="Está convocado";
+                return convocado;
+            }
+        }
+        function mostrarDatos(){
+            let nombre = document.getElementById("nombre").value;
+            let edad = document.getElementById("edad").value;
+            let ciudad = document.getElementById("ciudad").value;
+            let puntuacion = document.getElementById("puntuacion").value;
+            let jugador = new Campeonato(nombre, edad, ciudad, puntuacion);
+            document.getElementById("jugadorDatos").innerHTML = jugador.imprimirDatos();
+            document.getElementById("resultado").innerHTML= jugador.comprobarConvocatoria();
+        }
+    </script>
+</body>
+</html>

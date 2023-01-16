@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 100px;
+        }
+        .main>div{
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            gap:10px;
+        }
+        #obtenerDatos{
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .valores{
+            width: 100px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main class="main" id="main">
+        <div>
+            <h1>Introduzca datos</h1>
+            <div id="obtenerDatos"></div>
+        </div>
+        <div>
+            <h1>Resultado suma</h1>
+            <h1 id="resultadoSuma">-</h1>
+        </div>
+        <div>
+            <h1>Resultado suma menores de 600</h1>
+            <h1 id="resultado600">-</h1>
+        </div>
+        <div>
+            <h1>Número de valores superiores a 2000</h1>
+            <h1 id="mayores2000">-</h1>
+        </div>
+        <input type="button" value="Generar" onclick="mostrarDatos()">
+    </main>
+    <script>
+        //         4.- Desarrollar un script que permita ingresar un array de 10 elementos numéricos, e informe:
+        // - El valor acumulado de todos los elementos del array.
+        // - El valor acumulado de los elementos del array que sean menores de 600.
+        // - Numero de valores cuyo valor es superior a 2000. (1 pto.)
+        function generarInputs(){
+            let contenedor= document.getElementById("obtenerDatos");
+            const NUMEROINPUTS = 10;
+            for (let i = 0; i < NUMEROINPUTS; i++) {
+                contenedor.innerHTML += "Valor: <input type='number' class='valores'>";
+            }
+        }
+        generarInputs();
+        let resultadoSuma = document.getElementById("resultadoSuma");
+        let resultado600 = document.getElementById("resultado600");
+        let mayores2000 = document.getElementById("mayores2000");
+        function mostrarDatos(){
+            const arrayDatos = document.getElementsByClassName("valores");
+            let sumaInicial = 0;
+            let suma600 = 0;
+            let cont2000 = 0;
+            for (let i = 0; i < arrayDatos.length; i++) {
+                let value = parseInt(arrayDatos[i].value);
+                sumaInicial += value;
+                if(value<600) suma600 += value;
+                if(value>2000) cont2000++;
+            }
+            resultadoSuma.innerHTML = sumaInicial;
+            resultado600.innerHTML = suma600;
+            mayores2000.innerHTML = cont2000;
+        }
+    </script>
+</body>
+</html>
