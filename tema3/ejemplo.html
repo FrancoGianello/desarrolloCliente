@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./ejemplo.js" defer></script>
+    <link rel="stylesheet" href="ejemplo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <input type="button" value="Control con inputs" class="acordeon">
+            <div class="control_inputs">
+                <div class="formulario">
+                    <h3>Ejemplo formulario</h3>
+                    introduzca nombre
+                    <input type="text" name="nombre" id="nombre">
+                    introduzca email
+                    <input type="email" name="email" id="email">
+                    numero de nietos
+                    <input type="number" name="number" id="number">
+                    fecha de nacimiento
+                    <input type="date" name="fecha" id="fecha">
+                    <input type="submit" value="enviar">
+                </div>
+                <div class="lista">
+                    <h3>Lista desplegable</h3>
+                    <input type="button" id="botonLista" class="botonLista" value="Lista">
+                    <div id="listaDesplegable">
+                        <a href="#"> Netflix </a>
+                        <a href="#"> HBO </a> 
+                        <a href="#"> Francis.com </a> 
+                        <a href="#"> Disney- </a>
+                    </div>
+                </div>
+                <div class="checkboxes">
+                    <h3>Uso de checkbox</h3>
+                    <label for="cb1">
+                        Hola
+                        <input type="checkbox" value="Hola" class="cb" id="cb1" name="cb1">
+                    </label>
+                    <label for="cb2">
+                        Que tal
+                        <input type="checkbox" value="Que tal" class="cb" id="cb2" name="cb2">
+                    </label>  
+                    <label for="cb3">
+                        Como estas
+                        <input type="checkbox" value="Como estas" class="cb" id="cb3" name="cb3">
+                    </label>
+                    <label for="cb4">
+                        Byee
+                        <input type="checkbox" value="Byee" class="cb" id="cb4" name="cb4">
+                    </label>
+                    <input type="submit" value="Enviar" id="botonCb">
+                    <p id="cadena"></p>
+                </div>
+                <div class="toggle">
+                    <h2 id="tituloToggle">Toggle off</h2>
+                    <label class="switch">
+                    <input id="toggle" type="checkbox">
+                    <div class="slider"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <input type="button" value="Componentes de navegación" class="acordeon">
+            <div class="componentes_navegacion">
+                <div class="busqueda">
+                    Buscar país
+                    <input type="text" name="barraBusqueda" id="barraBusqueda">
+                    <ul>
+                        <li class="buscar">Argentina</li>
+                        <li class="buscar">España</li>
+                        <li class="buscar">Francia</li>
+                        <li class="buscar">Tunez</li>
+                        <li class="buscar">Messi</li>
+                        <li class="buscar">Argelia</li>
+                    </ul>
+                </div>
+                <div id="carrusel">
+                    <button class="button-block" id="retroceder">Retroceder</button>
+                    <div id="imagenCarr"></div>
+                    <button class="button-block" id="avanzar">Avanzar</button>
+                </div>
+                <div class="etiquetas">
+                    <h3>Tags a elegir</h3>
+                    <div id="elegir">
+                        <input class="botonTag" type="button" value="cosa1">
+                        <input class="botonTag" type="button" value="cosa2">
+                        <input class="botonTag" type="button" value="cosa3">
+                        <input class="botonTag" type="button" value="cosa4">
+                        <input class="botonTag" type="button" value="cosa5">
+                        <input class="botonTag" type="button" value="cosa6">
+                        <input class="botonTag" type="button" value="cosa7">
+                        <input class="botonTag" type="button" value="cosa8">
+                        <input class="botonTag" type="button" value="cosa9">
+                        <input class="botonTag" type="button" value="cosa0">
+                    </div>
+                    <h3>Tags elegidos</h3>
+                    <div id="elegidos"></div>
+                </div>
+                <div id="iconos">
+                    <h2>Iconos</h2>
+                    <i class="fa-solid fa-code"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-solid fa-database"></i>
+                    <i class="fa-solid fa-image"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-solid fa-cash-register"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <input type="button" value="Componentes de información" class="acordeon">
+            <div class="componentes_informacion">
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+https://www.usability.gov/how-to-and-tools/methods/user-interface-elements.html
+
+https://careerfoundry.com/en/blog/ui-design/ui-element-glossary/
+
+COMPONENTES DE UNA INTERFAZ DE USUARIO
+Cuando diseñamos una interfaz, hemos de ser consistentes y predecibles a la hora de escoger los elementos que la componen. 
+Nuestra interfaz debe ser intuitiva para el usuario, ya bien estén familiarizados con estos elementos o no, por lo que adapatar estos elementos cuando sea pertinente ayudará a la eficiencia y satisfacción durante el uso del programa.
+
+Los elementos de intefaz de usuario se clasifican en las siguientes categorías:
+    Control con inputs: checkboxes, buttons... (más elementos de un formulario), dropdown lists, toggles, etc
+    Componentes de navegación: breadcrumb, slider, barra de búsqueda, paginación, carrusel, etiquetas, iconos, etc
+    Componentes de información: tooltips, iconos, progress bar, notificaciones, message boxes, etc
+    Contenedores: acordeón, bento menu: Bento, Hamburger, alt-burger, meatball, kebab, doner
