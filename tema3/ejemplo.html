@@ -82,23 +82,21 @@
                     </ul>
                 </div>
                 <div id="carrusel">
-                    <button class="button-block" id="retroceder">Retroceder</button>
+                    <input type="button" class="button-block" id="retroceder" value="Retroceder">
                     <div id="imagenCarr"></div>
-                    <button class="button-block" id="avanzar">Avanzar</button>
+                    <input type="button" class="button-block" id="avanzar" value="Avanzar">
                 </div>
                 <div class="etiquetas">
                     <h3>Tags a elegir</h3>
                     <div id="elegir">
-                        <input class="botonTag" type="button" value="cosa1">
-                        <input class="botonTag" type="button" value="cosa2">
-                        <input class="botonTag" type="button" value="cosa3">
-                        <input class="botonTag" type="button" value="cosa4">
-                        <input class="botonTag" type="button" value="cosa5">
-                        <input class="botonTag" type="button" value="cosa6">
-                        <input class="botonTag" type="button" value="cosa7">
-                        <input class="botonTag" type="button" value="cosa8">
-                        <input class="botonTag" type="button" value="cosa9">
-                        <input class="botonTag" type="button" value="cosa0">
+                        <input class="botonTag" type="button" value="Chino">
+                        <input class="botonTag" type="button" value="Indio">
+                        <input class="botonTag" type="button" value="Italiano">
+                        <input class="botonTag" type="button" value="Hamburguesas">
+                        <input class="botonTag" type="button" value="Tapas">
+                        <input class="botonTag" type="button" value="Asado">
+                        <input class="botonTag" type="button" value="Libanés">
+                        <input class="botonTag" type="button" value="Messi">
                     </div>
                     <h3>Tags elegidos</h3>
                     <div id="elegidos"></div>
@@ -117,7 +115,30 @@
         <div class="container">
             <input type="button" value="Componentes de información" class="acordeon">
             <div class="componentes_informacion">
-                
+                <div id="containerTooltip">
+                    <span id="tooltiptext" class="tooltiptext">Pulsa para color aleatorio</span>
+                    <input type="button" value="Color random" id="tooltip">
+                    <p></p>
+                </div>     
+                <div class="barrasProgreso">
+                    <h3>Estadisticas con barras de progreso</h3>
+                    Numero de palomas por cada 100 personas: 80
+                    <progress max="100" value="80"></progress>
+                    Numero de arboles por cada 100 personas: 50
+                    <progress max="100" value="50"></progress>
+                    Numero de moviles por cada 100 personas: 90
+                    <progress max="100" value="90"></progress>
+                    Numero de nueces por cada 100 personas: 100
+                    <progress max="100" value="100"></progress>
+                </div>
+                <div class="notificacion">
+                    <input type="button" value="Para notificacion" id="notificacion">
+                    <input type="button" value="Otra notificacion" id="otraNotificacion">
+                    <input type="button" value="Ultima notificacion" id="ultimaNotificacion">                    
+                </div>
+                <div class="containerMensaje">
+                    <article class="mensaje">Aquí va un mensaje sobre la página. Este mensaje transmite información muy concisa. Hacerlos muy largos y tediosos es un craso error.<br/>No lo hagas.</article>
+                </div>  
             </div>
         </div>
     </main>

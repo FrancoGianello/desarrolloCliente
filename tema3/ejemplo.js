@@ -2,7 +2,7 @@ var acordeon = document.getElementsByClassName("acordeon")
 //acordeon en base a la altura del contenedor, hace el efectillo este del acordeon
 for (let i = 0; i < acordeon.length; i++) {
   acordeon[i].addEventListener("click", function(){
-    desplegar(this)
+    desplegarAcordeon(this)
   })
 }
 //fecha por defecto
@@ -11,17 +11,32 @@ document.getElementById('fecha').valueAsDate = new Date();
 //lista desplegable
 var botonLista = document.getElementById("botonLista");  
 botonLista.addEventListener("click", function(){
-  desplegar(this)
+  this.classList.toggle("active")
+  var container = this.nextElementSibling
+  if (container.style.maxHeight) {
+      container.style.maxHeight = null
+  } else {
+      container.style.maxHeight = container.scrollHeight + "px"
+  }
 })
 
-function desplegar(elemento) {
+function desplegarAcordeon(elemento) {
   elemento.classList.toggle("active")
   var container = elemento.nextElementSibling
   if (container.style.maxHeight) {
       container.style.maxHeight = null
-    } else {
+      elemento.removeAttribute("id")
+  } else {
       container.style.maxHeight = container.scrollHeight + "px"
-    } 
+      elemento.id = "seleccionado"
+      //cerrar los otros cuando abres uno
+      for (let i = 0; i < acordeon.length; i++) {
+        if(acordeon[i].id!="seleccionado"){
+          acordeon[i].nextElementSibling.style.maxHeight=null
+        }
+        acordeon[i].removeAttribute("id")
+      }
+  }
 }
 
 //pintar elementos de un checkbox
@@ -54,7 +69,7 @@ toggle.addEventListener('change', function () {
 });
 
 let barraBusqueda = document.getElementById("barraBusqueda")
-barraBusqueda.addEventListener("input", (e) => {
+barraBusqueda.addEventListener("input", function() {
   let filtro = barraBusqueda.value
   console.log(filtro)
   let buscar = document.getElementsByClassName("buscar")
@@ -119,3 +134,29 @@ for (let i = 0; i < tagsElegir.length; i++) {
       elegir.append(this)
   })
 }
+
+//tooltip
+
+let tooltip = document.getElementById("tooltip")
+tooltip.addEventListener("click", function(){
+  var color = Math.floor(Math.random()*16777215).toString(16);
+  tooltip.style.backgroundColor = "#"+color
+  tooltip.value= "Color random #"+color
+})
+
+//notificaciones
+
+let notificacion = document.getElementById("notificacion")
+notificacion.addEventListener("click", function(){
+  alert("Este alert es insufrible, no usar nunca!")
+})
+
+let notificacion2 = document.getElementById("otraNotificacion")
+notificacion2.addEventListener("click", function(){
+  prompt("El prompt está igual de mal!")
+})
+
+let notificacion3 = document.getElementById("ultimaNotificacion")
+notificacion3.addEventListener("click", function(){
+  Notification.requestPermission()
+})
