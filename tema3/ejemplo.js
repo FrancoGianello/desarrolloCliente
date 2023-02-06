@@ -67,6 +67,24 @@ toggle.addEventListener('change', function () {
     titulo.innerText="Toggle off"
   }
 });
+var toggle2 = document.getElementById("toggleGrande")
+
+toggle2.addEventListener('change', function () {
+  let titulo = document.getElementById("tituloToggleGrande")
+  let main = document.getElementsByTagName("main")[0]
+  if (toggle2.checked) {
+    main.style.backgroundColor = "darkblue"
+    titulo.style.color = "white"
+    titulo.innerText="Modo oscuro off"
+  } else {
+    main.style.backgroundColor= "white"
+    titulo.style.color = "black"
+    titulo.innerText="Modo oscuro on"
+  }
+});
+
+
+//searchbar
 
 let barraBusqueda = document.getElementById("barraBusqueda")
 barraBusqueda.addEventListener("input", function() {

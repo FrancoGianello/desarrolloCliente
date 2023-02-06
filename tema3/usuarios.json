@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "nombre": "francis",
+        "tipo": "admin",
+        "email" : "cosa@email.com"
+    } ,
+    {
+        "id" : 2,
+        "nombre": "deez",
+        "tipo": "user",
+        "email" : "cosa@email.com"
+    },
+    {
+        "id" : 3,
+        "nombre": "json",
+        "tipo": "user",
+        "email" : "cosa@email.com"
+    },
+    {
+        "id" : 4,
+        "nombre": "php user",
+        "tipo": "user",
+        "email" : "cosa@email.com"
+    }
+]

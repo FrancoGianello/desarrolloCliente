@@ -45,7 +45,6 @@ input[type=button]:hover, input[type=submit]:hover{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    padding: 0 10px;
 
     width: 100%;
     background-color: rgb(202, 195, 195);

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100vw;
+            height: 100vh;
+            background-color: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <h1>Comprobar usuarios</h1>
+            Nombre usuario:
+            <input type="text" name="usuario" id="usuario">
+            <input type="button" id="enviar" value="enviar">
+            <h3 id="resultado"></h3>
+        </div>
+    </main>
+    <script>
+        let boton = document.getElementById("enviar")
+        console.log(boton)
+        boton.addEventListener("click", cogerDatos)
+
+        async function cogerDatos(){
+            let datos = await fetch("usuarios.json")
+            .then(function(datos){
+                return datos.json();
+            })
+            .then(function(datos){
+                let datoUsuario = document.getElementById("usuario").value
+                let existe = false
+                for (let value of datos) {
+                    if (datoUsuario==value.nombre)
+                    existe = true
+                }
+                let res = (existe)?"existe":"no existe"
+                document.getElementById("resultado").innerHTML =  "El usuario: "+datoUsuario+" "+res
+            })
+        }
+    </script>
+</body>
+</html>
